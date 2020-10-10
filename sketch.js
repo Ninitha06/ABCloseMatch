@@ -134,7 +134,7 @@ function draw(){
 function mouseReleased(){
     setTimeout(() => {
         slingshot.fly();
-      }, 100);
+      }, 150);
     
       //engine.timing.timeScale = 1.5;
 
@@ -146,9 +146,10 @@ function keyPressed(){
     console.log(bird.body.speed);
     if(keyCode === 32 && bird.body.speed < 1){
        bird.trajectory = [];    
-       Matter.Body.setAngle(bird.body,0);
-       Matter.Body.setPosition(bird.body,{x:260, y:135});
+       Matter.Body.setVelocity(bird.body, { x : 0, y: 0});
+       Matter.Body.setPosition(bird.body,{x:270,y:170});
        slingshot.attach(bird.body);
+       Matter.Body.setAngle(bird.body,0);
        World.add(world,mConstraint);
     }
 }

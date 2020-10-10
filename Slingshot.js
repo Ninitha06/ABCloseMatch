@@ -35,9 +35,9 @@ class SlingShot{
             }
             else if(pointA.x>270){
                 strokeWeight(3);
-                line(pointA.x-15, pointA.y+5, pointB.x -10, pointB.y+15);
-                line(pointA.x-15, pointA.y+5, pointB.x + 30, pointB.y+15);
-                image(this.sling3Img,pointA.x - 30, pointA.y -15,15,30);
+                line(pointA.x+20, pointA.y+5, pointB.x -10, pointB.y+15);
+                line(pointA.x+20, pointA.y+5, pointB.x + 30, pointB.y+15);
+                image(this.sling3Img,pointA.x + 20, pointA.y-10,15,30);
             }
             pop ();
         }
